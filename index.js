@@ -39,8 +39,8 @@ const launchServer = async () => {
   console.log(`${chalk.bold("Remote:")} ${remoteURL}`);
 
   try {
-    await clipboardy.write(localURL);
-    console.log("\nLocal URL copied to clipboard!\n");
+    await clipboardy.write(remoteURL);
+    console.log("\nRemote URL copied to clipboard!");
   } catch (error) {
     console.log(`${chalk.red("Error")} copying URL to clipboard: ${error}`);
   }
