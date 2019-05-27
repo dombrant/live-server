@@ -16,7 +16,7 @@ const params = {
 const launchServer = async () => {
   const arguments = process.argv.slice(2);
   [...arguments].toString();
-  // Make an array of any arguments the user passes
+  // Make an array of any arguments the user passes via the command line
   // This will allow the user to specify the port with the first argument
   // and they can change the root folder from 'src' to 'dist'
 
@@ -48,5 +48,3 @@ const launchServer = async () => {
 };
 
 launchServer();
-
-module.exports = launchServer;

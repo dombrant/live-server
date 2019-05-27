@@ -19,22 +19,10 @@ Because this package is not hosted on npm, `npm link` must be ran before being a
 
 ## Usage
 
-### From the command line:
-
-Call
+From the command line, call:
 
 ```bash
 $ live-server
-```
-
-### From Node:
-
-After cloning this repo, copy its contents into your project, then import it:
-
-```js
-const liveServer = require('lib/live-server/index.js);
-
-liveServer();
 ```
 
 ## Motivation
