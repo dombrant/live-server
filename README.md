@@ -12,7 +12,10 @@ Download this repo's contents, or clone it:
 git clone https://github.com/dombrant/live-server.git
 cd live-server
 npm install
+npm link
 ```
+
+Because this package is not hosted on npm, `npm link` must be ran before being able to call it from the command line.
 
 ## Usage
 
