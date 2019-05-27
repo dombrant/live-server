@@ -6,11 +6,23 @@ A custom wrapper for @tapio's [live-server package](https://github.com/tapio/liv
 
 ## Installation
 
+Download this repo's contents, or clone it:
+
+```bash
+git clone https://github.com/dombrant/live-server.git
+cd live-server
+npm install
+```
+
 ## Usage
 
 ### From the command line:
 
-Call `live-server`
+Call
+
+```bash
+$ live-server
+```
 
 ### From Node:
 
