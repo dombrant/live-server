@@ -16,19 +16,23 @@ const params = {
 const launchServer = async () => {
   const arguments = process.argv.slice(2);
   [...arguments].toString();
-  // Make an array of any arguments the user passes via the command line
-  // This will allow the user to specify the port with the first argument
-  // and they can change the root folder from 'src' to 'dist'
+  // Create an array of the arguments passed via the command line
 
-  if (arguments.length === 2) {
-    params.port = Number(arguments[0]);
-    params.root = arguments[1];
-    // If the user passes two arguments, make the port equal to the first argument
-    // and change the root folder to 'dist' if the user types it as the second argument
-  } else if (arguments.length === 1) {
-    params.port = Number(arguments[0]);
-    // If the user passes one argument, change the port to the argument passed
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i] === "--port" || arguments[i] === "-p") {
+      params.port = parseInt(arguments[i + 1]);
+    }
+    if (arguments[i] === "--root" || arguments[i] === "-r") {
+      params.root = arguments[i + 1];
+    }
+    if (arguments[i] === "--open" || arguments[i] === "-o") {
+      params.open = arguments[i + 1];
+    }
+    if (arguments[i] === "--logLevel" || arguments[i] === "-l") {
+      params.logLevel = parseInt(arguments[i + 1]);
+    }
   }
+  // Allow the user to set their own arguments with any of the flags above
 
   liveServer.start(params);
 
