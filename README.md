@@ -33,7 +33,7 @@ Command line parameters:
 
 ## Motivation
 
-I've really enjoyed using `live-server` for development, but I wanted to create a simplified version that I can edit for myself. Specifically, this package displays both the local and remote (from the network's ip address) URLs (inspired by Zeit's [serve](https://github.com/zeit/serve)).
+I've really enjoyed using `live-server` for development, but I wanted to create a simplified version that I can edit for myself. Specifically, this package displays both the local and remote (from the network's ip address) URLs, and automatically copies the remote URL to the clipboard (inspired by Zeit's [serve](https://github.com/zeit/serve)).
 
 ## Contributors
 
