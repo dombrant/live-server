@@ -8,7 +8,6 @@ const clipboardy = require("clipboardy");
 const params = {
   port: 3000,
   root: "dist",
-  open: false,
   logLevel: 0
   // Set log level to 0 so it only logs errors
 };
@@ -24,9 +23,6 @@ const launchServer = async () => {
     }
     if (arguments[i] === "--root" || arguments[i] === "-r") {
       params.root = arguments[i + 1];
-    }
-    if (arguments[i] === "--open" || arguments[i] === "-o") {
-      params.open = arguments[i + 1];
     }
     if (arguments[i] === "--logLevel" || arguments[i] === "-l") {
       params.logLevel = parseInt(arguments[i + 1]);

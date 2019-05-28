@@ -29,7 +29,6 @@ Command line parameters:
 
 - `--port | -p` - port for the url, default value is `3000`
 - `--root | -r` - the root directory to launch from, default value is `dist`
-- `--open | -o` - open the root directory in the default browser, default value is `false`
 - `--logLevel | -l` - 0 = errors only, 1 = some, 2 = lots, default value is `0`
 
 ## Motivation
