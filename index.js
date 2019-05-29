@@ -7,7 +7,7 @@ const clipboardy = require("clipboardy");
 
 const params = {
   port: 3000,
-  root: "dist",
+  root: "",
   logLevel: 0
   // Set log level to 0 so it only logs errors
 };
