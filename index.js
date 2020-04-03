@@ -35,12 +35,12 @@ const launchServer = async () => {
   const localURL = `http://localhost:${params.port}`;
   const remoteURL = `http://${ip.address()}:${params.port}`;
 
-  console.log(`\n${chalk.bold("Local:")}  ${localURL}`);
-  console.log(`${chalk.bold("Remote:")} ${remoteURL}`);
+  console.log(`\n${chalk.bold.green("Local:")}  ${localURL}`);
+  console.log(`${chalk.bold.green("Remote:")} ${remoteURL}`);
 
   try {
     await clipboardy.write(remoteURL);
-    console.log("\nRemote URL copied to clipboard!");
+    console.log(`\n${chalk.cyan("Remote URL copied to clipboard!")}`);
   } catch (error) {
     console.log(`${chalk.red("Error")} copying URL to clipboard: ${error}`);
   }
