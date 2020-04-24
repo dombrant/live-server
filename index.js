@@ -8,24 +8,24 @@ const clipboardy = require("clipboardy");
 const params = {
   port: 3000,
   root: "",
-  logLevel: 0
+  logLevel: 0,
   // Set log level to 0 so it only logs errors
 };
 
 const launchServer = async () => {
-  const arguments = process.argv.slice(2);
-  [...arguments].toString();
+  const argumentsArray = process.argv.slice(2);
+  [...argumentsArray].toString();
   // Create an array of the arguments passed via the command line
 
-  for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i] === "--port" || arguments[i] === "-p") {
-      params.port = parseInt(arguments[i + 1]);
+  for (let i = 0; i < argumentsArray.length; i++) {
+    if (argumentsArray[i] === "--port" || argumentsArray[i] === "-p") {
+      params.port = parseInt(argumentsArray[i + 1]);
     }
-    if (arguments[i] === "--root" || arguments[i] === "-r") {
-      params.root = arguments[i + 1];
+    if (argumentsArray[i] === "--root" || argumentsArray[i] === "-r") {
+      params.root = argumentsArray[i + 1];
     }
-    if (arguments[i] === "--logLevel" || arguments[i] === "-l") {
-      params.logLevel = parseInt(arguments[i + 1]);
+    if (argumentsArray[i] === "--logLevel" || argumentsArray[i] === "-l") {
+      params.logLevel = parseInt(argumentsArray[i + 1]);
     }
   }
   // Allow the user to set their own arguments with any of the flags above
