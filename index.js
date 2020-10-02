@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const liveServer = require("live-server");
 const ip = require("ip");
 const chalk = require("chalk");
