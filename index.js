@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const liveServer = require("live-server");
-const ip = require("ip");
-const chalk = require("chalk");
-const clipboardy = require("clipboardy");
+import LiveServer from "live-server";
+import os from "os";
+import chalk from "chalk";
+import clipboard from "clipboardy";
 
 const params = {
   port: 3000,
@@ -29,16 +29,17 @@ const launchServer = async () => {
   }
   // Allow the user to set their own arguments with any of the flags above
 
-  liveServer.start(params);
+  LiveServer.start(params);
 
   const localURL = `http://localhost:${params.port}`;
-  const remoteURL = `http://${ip.address()}:${params.port}`;
+  const ipAddress = os.networkInterfaces().lo0[0].address;
+  const remoteURL = `http://${ipAddress}:${params.port}`;
 
   console.log(`\n${chalk.bold.green("Local:")}  ${localURL}`);
   console.log(`${chalk.bold.green("Remote:")} ${remoteURL}`);
 
   try {
-    await clipboardy.write(remoteURL);
+    await clipboard.write(remoteURL);
     console.log(`\n${chalk.cyan("Remote URL copied to clipboard!")}`);
   } catch (error) {
     console.log(`${chalk.red("Error")} copying URL to clipboard: ${error}`);

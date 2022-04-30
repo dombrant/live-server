@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A custom wrapper for @tapio's live-server package",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "live-server": "index.js"
   },
@@ -10,10 +11,9 @@
   "author": "Dominic Brant",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "clipboardy": "^2.3.0",
-    "ip": "^1.1.5",
-    "live-server": "^1.2.1"
+    "chalk": "^5.0.1",
+    "clipboardy": "^3.0.0",
+    "live-server": "^1.2.2"
   },
   "devDependencies": {}
 }
