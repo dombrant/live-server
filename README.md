@@ -39,7 +39,7 @@ I've really enjoyed using `live-server` for development, but I wanted to create 
 
 **Dominic Brant**.
 
-[Follow me on Twitter](https://twitter.com/dombrant). If you have any thoughts/suggestions/problems, feel free to open an issue or Tweet me.
+If you have any thoughts/suggestions/problems, feel free to open an [issue](https://github.com/dombrant/live-server/issues).
 
 ## License
 
